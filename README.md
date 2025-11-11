@@ -1,3 +1,5 @@
+# Compound-v3-data-analysis-counterfactual-analysis
+
 - **Compound_v3_analysis.ipynb:** The main jupyterhub notebook file that includes the analysis regarding the Compound v3protocol:
 
     - It Fetchs the necesary data in different steps (using get_data.py).
@@ -20,16 +22,20 @@
 
 - **get_data.py:** It includes the functions we used the get the necessary data:
 
-    - fetch_last_liquidations: first function getting the liquidation events from the compound v3 subgraph 
+    - `fetch_last_liquidations`: first function getting the liquidation events from the compound v3 subgraph 
     (https://thegraph.com/explorer/subgraphs/AwoxEZbiWLvv6e3QdvdMZw4WDURdGbvPfHmZRc8Dpfz9?view=Query&chain=arbitrum-one)
     
-    - add_positions_before: get borrowers loan and collateral values before liquidation using previous positions
+    - `add_positions_before`: get borrowers loan and collateral values before liquidation using previous positions
     
-    - fetch_prices_dataframe: get token proces at time of block numbers in the main dataframe.
+    - `fetch_prices_dataframe`: get token proces at time of block numbers in the main dataframe.
     
-    - get_comet_params_by_block:  get the necessary parameters to estimate the collateral discount such as liquidity factor and store_front_price_factor
+    - `get_comet_params_by_block`:  get the necessary parameters to estimate the collateral discount such as liquidity factor and store_front_price_factor
  
       
 - **data files:** Related data files in the analysis:
-        - compound_v3_liqs.csv: The first driven file and the result of running the function fetch_last_liquidations. Note that no treatment has been added to this table and it includes data for all the pools
-        - df_usdc_with_counterfactual.csv: It is the output file includeing all the added columns and treatments, but it only inlcudes observations related to the pool USDC-WETH.
+
+  - compound_v3_liqs.csv: The first driven file and the result of running the function `fetch_last_liquidations`. Note that no treatment has been added to this table and it includes data for all the pools
+
+  - df_usdc_with_counterfactual.csv: It is the output file includeing all the added columns and treatments, but it only inlcudes observations related to the pool USDC-WETH.
+ 
+**note:** This analysis is presented in a mirror article: (https://mirror.xyz/0xA95d57778fE6b96268bEA3DD9D6e106AcaD68d1f/LlvfYnpQHii58N01BVJG_3UlFN1ckFsIFAnr9TuJGa4)
