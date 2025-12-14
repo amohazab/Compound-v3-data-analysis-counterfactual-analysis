@@ -39,3 +39,6 @@
   - df_usdc_with_counterfactual.csv: It is the output file includeing all the added columns and treatments, but it only inlcudes observations related to the pool USDC-WETH.
  
 **note:** This analysis is presented in a mirror article: (https://mirror.xyz/0xA95d57778fE6b96268bEA3DD9D6e106AcaD68d1f/LlvfYnpQHii58N01BVJG_3UlFN1ckFsIFAnr9TuJGa4)
+
+and also in a medium article: https://medium.com/@amin.mohazab/welfare-analysis-of-liquidation-in-compound-v3-and-the-effect-of-adding-dynamic-close-factor-778d4f9ba6fc
+
